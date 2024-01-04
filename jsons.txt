@@ -1,0 +1,61 @@
+//for create user
+http://localhost:3000/users/register
+{
+  "username": "JohnDoe4",
+  "email": "john4@example.com",
+  "password": "securepassword"
+}
+
+//
+fetch user
+GET http://localhost:3000/users/fetch/email/johndoe@example.com
+
+//post a post 
+http://localhost:3000/posts/
+{
+  "userId": "659029785b5bbdacdb14d22c",
+  "title": "Some by me retinol",
+  "content": "
+Introducing Somebody Mi Retinol Serum – your secret weapon for radiant, youthful skin. This advanced formula is meticulously crafted to harness the power of retinol, a proven ingredient known for its exceptional anti-aging properties. Somebody Mi Retinol Serum is designed to target fine lines, wrinkles, and uneven skin tone, promoting a smoother and more youthful complexion.
+
+Infused with a potent concentration of pure retinol, this serum works diligently to stimulate collagen production, enhancing skin elasticity and firmness. The lightweight and fast-absorbing formula ensure that the powerful benefits of retinol penetrate deeply into the skin, revitalizing and renewing at the cellular level.
+
+But that's not all – Somebody Mi Retinol Serum is enriched with nourishing ingredients like hyaluronic acid and vitamin E, providing intense hydration and helping to maintain a supple and plump appearance. The serum is also thoughtfully formulated to be gentle on the skin, minimizing the risk of irritation.
+
+Make Somebody Mi Retinol Serum a staple in your skincare routine, and let the transformative properties of retinol unveil a more radiant, youthful version of you. Turn back the clock on aging and embrace a complexion that exudes confidence and vitality with Somebody Mi Retinol Serum.",
+  "photos": ["uploads/retinol.jpg"]
+}
+
+//update user 
+http://localhost:3000/users/update/email/john@example.com
+
+{
+  "currentPassword": "securepassword",
+  "newUsername": "newFarah",
+  "newPassword": "newFarahPassword"
+}
+
+// jwt access
+http://localhost:3000/protected-route
+
+//fetch latest post
+http://localhost:3000/posts/latest
+
+//update post
+http://localhost:3000/posts/65903728cbba8b1ca3e15751
+{
+  "title": "Updated Post some by mi retinol Title"
+}
+
+//delete user
+http://localhost:3000/users/delete/id
+
+//del post
+http://localhost:3000/posts/postid
+
+
+//upload photos
+http://localhost:3000/upload
+
+//oauth
+http://localhost:3000/auth/google
